@@ -1,0 +1,16 @@
+@import "mixins";
+@import "reset";
+@import "fonts&variables";
+
+header {
+  background-color: $color-blue;
+
+  @include media-down (l) {
+    background-color: $color-green;
+  }
+
+  @include media-down (m) {
+    background-color: $color-light-purple;
+  }
+
+}

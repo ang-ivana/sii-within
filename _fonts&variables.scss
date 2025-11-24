@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "EBG";
+  src: url(../fonts/EBGaramond-Regular.woff2);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "EBG";
+  src: url(../fonts/EBGaramond-Medium.woff2);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "EBG";
+  src: url(../fonts/EBGaramond-Bold.woff2);
+  font-weight: 600;
+}
+
+
+@font-face {
+  font-family: "Itim";
+  src: url(../fonts/Itim-Regular.woff2);
+  font-weight: 400;
+}
+
+//Fonts
+$font-ebg: "EBG";
+$font-itim: "Itim";
+
+//Breakpoints
+$grid-breakpoints:("xs": 420px,
+  "s":560px,
+  "m": 768px,
+  "l": 1024px,
+  "xl": 1200px);
+
+//Colors
+$color-blue: #DCE4F1;
+$color-green:#BBC5C6;
+$color-light-purple: #9C82A5;
+$color-purple: #67527E;
+$color-navy: #3E3A5D;

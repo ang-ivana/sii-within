@@ -1,0 +1,20 @@
+@font-face {
+  font-family: "EBG";
+  src: url(../fonts/EBGaramond-Regular.woff2);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "EBG";
+  src: url(../fonts/EBGaramond-Medium.woff2);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "EBG";
+  src: url(../fonts/EBGaramond-Bold.woff2);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Itim";
+  src: url(../fonts/Itim-Regular.woff2);
+  font-weight: 400;
+}
