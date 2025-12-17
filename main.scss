@@ -4,13 +4,216 @@
 
 header {
   background-color: $color-blue;
+  @include flexbox($justifyContent: space-between, $alignItems: center);
 
-  @include media-down (l) {
-    background-color: $color-green;
+  #logo {
+    margin: 10px 0;
+  }
+
+  .nav {
+    @include flexbox($alignItems: center);
+    gap: 30px;
+
+    &-item {
+      @include flexbox($alignItems: center, $direction: column, $justifyContent: center);
+      gap: 5px;
+      opacity: 50%;
+      transition: opacity .5s;
+
+      span {
+        color: $color-purple;
+        font-size: 15px;
+        font-family: $font-ebg;
+        position: relative;
+        display: block;
+
+        &::after {
+          position: absolute;
+          content: "";
+          border-bottom: 1px solid transparent;
+          bottom: -5px;
+          height: 1px;
+          width: 100%;
+          left: 0;
+          transform: scale(0);
+          transition: all .5s linear;
+
+        }
+      }
+
+      &:hover {
+        opacity: 1;
+        transition: opacity .5s;
+
+        span {
+          &::after {
+            transition: all .5s linear;
+            transform: scale(1);
+            border-color: $color-purple;
+
+          }
+        }
+      }
+
+      &.active {
+        opacity: 1;
+        transition: opacity .5s;
+
+        span {
+          &::after {
+            transition: all .5s linear;
+            transform: scale(1);
+            border-color: $color-purple;
+
+          }
+        }
+      }
+    }
+  }
+
+  #logoMobile {
+    display: none;
   }
 
   @include media-down (m) {
-    background-color: $color-light-purple;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: rgba(0, 0, 0, 0.1) -2px -7px 12px;
+
+    #logo {
+      display: none;
+    }
+
+    .nav {
+      justify-content: space-between;
+      width: 100%;
+      padding-top: 5px;
+      padding-bottom: 5px;
+
+      &-item {
+        span {
+          display: none;
+        }
+
+        &:hover {
+          opacity: 50%;
+        }
+      }
+    }
+
+    #logoMobile {
+      display: block;
+      border-radius: 50%;
+      border: 2px solid $color-purple;
+      width: 60px;
+      height: 60px;
+      @include flexbox($justifyContent: center, $alignItems: center);
+
+      img {
+        filter: brightness(0) saturate(100%) invert(32%) sepia(10%) saturate(1798%) hue-rotate(226deg) brightness(99%) contrast(86%);
+      }
+    }
   }
 
+
+
+}
+
+.main-padding {
+  padding: 0 60px;
+
+  @include media-down(l) {
+    padding: 0 30px;
+  }
+
+  @include media-down(s) {
+    padding: 0 16px;
+  }
+}
+
+.page-section {
+  height: 100vh;
+  display: none;
+
+  &.js-page-section {
+    display: block;
+  }
+
+}
+
+#home {
+  background: linear-gradient(359.98deg, #BBC5C6 0.01%, #DCE4F1 99.99%);
+
+  .hero-shot {
+    background-color: $color-blue;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+    .hero-top {
+      display: flex;
+      margin-bottom: 10px;
+
+      p {
+        font-family: $font-ebg;
+        font-size: 15px;
+        color: $color-navy;
+        font-weight: 400;
+      }
+    }
+
+    .profile {
+      @include flexbox($alignItems: center);
+      gap: 30px;
+
+      &-right {
+        span {
+          font-size: 24px;
+          font-family: $font-ebg;
+          color: $color-navy;
+        }
+
+        p {
+          font-size: 16px;
+          font-family: $font-ebg;
+          color: $color-navy;
+        }
+      }
+    }
+
+    form {
+      @include flexbox($alignItems:center);
+      border-radius: 20px;
+      background: #BBC5C68C;
+      gap: 10px;
+      max-height: 50px;
+      padding: 10px 15px;
+      flex-grow: 1;
+
+      input {
+        flex-grow: 1;
+        font-size: 16px;
+        color: $color-navy;
+        padding: 5px 10px;
+
+        &::placeholder {
+          font-size: 16px;
+          color: $color-navy;
+          opacity: .75;
+        }
+      }
+    }
+  }
+}
+
+#activities {
+  background-color: $color-green;
+}
+
+#statistics {
+  background-color: $color-light-purple;
+}
+
+#profile {
+  background-color: $color-purple;
 }

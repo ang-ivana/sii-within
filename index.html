@@ -4,19 +4,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sii Withing</title>
+  <title>Sii Within</title>
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" href="img/flaticon.ico">
 </head>
 
 <body>
-  <header>
+  <header class="main-padding">
     <a href="/" id="logo">
-      <img src="img/logo.svg" alt="logo" height="60" width="60">
+      <img src="img/logo-long.svg" alt="logo" height="60" width="186.8">
     </a>
+
+    <nav class="nav">
+      <a href="/" class="nav-item active">
+        <img src="img/icon-home.svg" alt="home" width="35" height="35">
+        <span>Home</span>
+      </a>
+      <a href="#" class="nav-item">
+        <img src="img/icon-activities.svg" alt="activites" width="35" height="35">
+        <span>Activities</span>
+      </a>
+      <a href="/" id="logoMobile">
+        <img src="img/logo.svg" width="38" height="40" alt="Logo Mobile">
+      </a>
+      <a href="#" class="nav-item">
+        <img src="img/icon-statistics.svg" alt="statistics" width="35" height="35">
+        <span>Statistics</span>
+      </a>
+      <a href="#" class="nav-item">
+        <img src="img/icon-profile.svg" alt="profile" width="35" height="35">
+        <span>Profile</span>
+      </a>
+    </nav>
   </header>
-  <main></main>
+  <main>
+    <section id="home" class="page-section js-page-section">
+      <div class="hero-shot main-padding">
+        <div class="hero-top">
+          <img src="img/calendar.svg" alt="calendar" width="24" height="24">
+          <p>Tue, 10 Oct 2025</p>
+        </div>
+        <div class="profile">
+          <img src="img/profile-picture.png" alt="profile-pic" width="100" height="100">
+          <div class="profile-right">
+            <span>Hi, Elena!</span>
+            <p>How are you feeling within today?</p>
+          </div>
+          <form>
+            <input type="text" placeholder="Search reflections or mindful moments…">
+            <img src="img/search.svg" alt="search" width="24" height="24">
+          </form>
+        </div>
+      </div>
+      <div class="state-of-mind"></div>
+      <div class="wellness-overview"></div>
+      <div class="daily-thought"></div>
+      <div class="reconnect"></div>
+    </section>
+    <section id="activities" class="page-section">Activities Section</section>
+    <section id="statistics" class="page-section">Statistics Section</section>
+    <section id="profile" class="page-section">Profile Section</section>
+  </main>
   <footer></footer>
+  <script src="main.js"></script>
 </body>
 
 </html>
