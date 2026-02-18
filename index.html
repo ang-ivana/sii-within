@@ -56,14 +56,248 @@
           </form>
         </div>
       </div>
-      <div class="state-of-mind"></div>
-      <div class="wellness-overview"></div>
-      <div class="daily-thought"></div>
-      <div class="reconnect"></div>
+      <div class="state-of-mind main-padding">
+        <h2>State of mind</h2>
+        <div class="state-of-mind-container">
+          <div class="state-of-mind-card">
+            <span>Mood balance</span>
+            <img src="img/mood-balance.svg" alt="mood balance" height="72" width="72">
+          </div>
+          <div class="state-of-mind-card">
+            <span>Mindfulness</span>
+            <img src="img/radix-icons_bar-chart.svg" alt="Mindfulness" width="72" height="72">
+          </div>
+          <div class="state-of-mind-card">
+            <span>Sleep quality</span>
+            <img src="img/mingcute_sleep-line.svg" alt="sleep quality" width="41" height="41">
+            <span>7h 15min</span>
+          </div>
+          <div class="state-of-mind-card">
+            <span>Energy flow</span>
+            <img src="img/energy-flow.svg" alt="energy flow" width="27" height="34">
+            <span>Stable</span>
+          </div>
+        </div>
+      </div>
+      <div class="wellness-overview main-padding">
+        <h2>Wellness Overview</h2>
+        <div class="wellness-overview-container">
+          <div class="wellness-overview-card">
+            <span>Mindful Minutes</span>
+            <p>You took 3 mindful breaks today.</p>
+            <img src="img/meteor-icons_leaf.svg" alt="mindful minutes" width="50" height="50">
+          </div>
+          <div class="wellness-overview-card">
+            <span>Sleep & Rest Quality</span>
+            <p>Your sleep has been more consistent lately.</p>
+            <img src="img/moon.svg" alt="sleep & rest" width="50" height="50">
+          </div>
+          <div class="wellness-overview-card">
+            <span>Reflection Journal</span>
+            <p>3 reflections this week.</p>
+            <img src="img/edit.svg" alt="reflection" width="50" height="50">
+          </div>
+          <div class="wellness-overview-card">
+            <span>Mindful Activity</span>
+            <p>You completed 2 mindful sessions today.</p>
+            <img src="img/head-heart.svg" alt="activity" width="50" height="50">
+          </div>
+        </div>
+      </div>
+      <div class="daily-thought">
+        <div class="daily-thought-container main-padding">
+          <span>Today’s Thought</span>
+          <p>“The calm you seek lives within you.”</p>
+          <div class="daily-thought-icons">
+            <img src="img/refresh.svg" alt="refresh" width="25" height="25" id="refreshImg">
+          </div>
+        </div>
+      </div>
+      <div class="reconnect main-padding">
+        <div class="reconnect-container main-padding">
+          <span>Take a 3-minute pause to reconnect.</span>
+          <p>Based on your recent reflections.</p>
+          <button aria-label="start session" class="btn primary-btn" id="session-btn">Start Session</button>
+          <img src="img/meteor-icons_leaf.svg" alt="leaf" width="50" height="50">
+        </div>
+        <div class="yoga-session">
+          <button class="btn primary-btn" id="stop-session">Stop Session</button>
+          <audio src="audio/Epic Spectrum - Morning Light (freetouse.com).mp3" id="sessionMusic"></audio>
+        </div>
+      </div>
     </section>
-    <section id="activities" class="page-section">Activities Section</section>
-    <section id="statistics" class="page-section">Statistics Section</section>
-    <section id="profile" class="page-section">Profile Section</section>
+    <section id="activities" class="page-section">
+      <div class="hero-shot main-padding">
+        <div class="hero-top">
+          <img src="img/calendar.svg" alt="calendar" width="24" height="24">
+          <p>Tue, 10 Oct 2025</p>
+        </div>
+        <div class="profile">
+          <img src="img/profile-picture.png" alt="profile-pic" width="100" height="100">
+          <div class="profile-right">
+            <span>Hi, Elena!</span>
+            <p>How are you feeling within today?</p>
+          </div>
+          <form>
+            <input type="text" placeholder="Search reflections or mindful moments…">
+            <img src="img/search.svg" alt="search" width="24" height="24">
+          </form>
+        </div>
+      </div>
+      <div class="activites-container main-padding">
+        <h2>All Suggestions</h2>
+        <div class="activites-suggestions">
+          <div class="activites-btn">
+            <div class="activites-info">
+              <div class="activites-img">
+                <span><img src="img/activites/run.svg" alt="run"></span>
+                <span><img src="img/activites/walk-2.svg" alt="walk"></span>
+                <span><img src="img/activites/yoga.svg" alt="yoga"></span>
+              </div>
+              <h3>Physical Activities</h3>
+              <span>Stretch, Walk, Yoga</span>
+            </div>
+            <img src="img/arrow-right.svg" alt="arrow" width="24" height="24">
+          </div>
+          <div class="activites-btn">
+            <div class="activites-info">
+              <div class="activites-img">
+                <span><img src="img/activites/sleep.svg" alt="sleep"></span>
+                <span><img src="img/activites/moon.svg" alt="moon"></span>
+              </div>
+              <h3>Sleep & Rest</h3>
+              <span>Rest, Recharge</span>
+            </div>
+            <img src="img/arrow-right.svg" alt="arrow" width="24" height="24">
+          </div>
+          <div class="activites-btn">
+            <div class="activites-info">
+              <div class="activites-img">
+                <span><img src="img/activites/overjoyed.svg" alt="overjoyed"></span>
+                <span><img src="img/activites/happy.svg" alt="happy"></span>
+                <span><img src="img/activites/neutral.svg" alt="neutral"></span>
+                <span><img src="img/activites/sad.svg" alt="sad"></span>
+              </div>
+              <h3>Mood Check-In</h3>
+              <span>Feel, Note</span>
+            </div>
+            <img src="img/arrow-right.svg" alt="arrow" width="24" height="24">
+          </div>
+          <div class="activites-btn">
+            <div class="activites-info">
+              <div class="activites-img">
+                <span><img src="img/activites/reflect.svg" alt="reflect"></span>
+                <span><img src="img/activites/express.svg" alt="express"></span>
+              </div>
+              <h3>Reflection Journal</h3>
+              <span>Reflect, Express</span>
+            </div>
+            <img src="img/arrow-right.svg" alt="arrow" width="24" height="24">
+          </div>
+          <div class="activites-btn">
+            <div class="activites-info">
+              <div class="activites-img">
+                <span><img src="img/activites/breathe.svg" alt="breathe"></span>
+                <span><img src="img/activites/relax.svg" alt="relax"></span>
+              </div>
+              <h3>Mindful Activities</h3>
+              <span>Breathe, Relax</span>
+            </div>
+            <img src="img/arrow-right.svg" alt="arrow" width="24" height="24">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="statistics" class="page-section">
+      <div class="hero-shot main-padding">
+        <div class="hero-top">
+          <img src="img/calendar.svg" alt="calendar" width="24" height="24">
+          <p>Tue, 10 Oct 2025</p>
+        </div>
+        <div class="profile">
+          <img src="img/profile-picture.png" alt="profile-pic" width="100" height="100">
+          <div class="profile-right">
+            <span>Hi, Elena!</span>
+            <p>How are you feeling within today?</p>
+          </div>
+          <form>
+            <input type="text" placeholder="Search reflections or mindful moments…">
+            <img src="img/search.svg" alt="search" width="24" height="24">
+          </form>
+        </div>
+      </div>
+      <h2 class="main-padding">Your Inner Progress</h2>
+      <span class="statistics-quote main-padding">Quite consistency adds up.</span>
+      <div class="stats-grid main-padding">
+        <div class="stat-card">
+          <span class="stat-label">Mindful Minutes</span>
+          <span class="stat-value" id="mindfulMinutes">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Breathing Sessions</span>
+          <span class="stat-value" id="breathingSessions">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Journal Entries</span>
+          <span class="stat-value" id="journalEntries">0</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-label">Current Streak</span>
+          <span class="stat-value" id="currentStreak">0 days</span>
+        </div>
+        <div class="stat-card wide">
+          <span class="stat-label">Most Active Time</span>
+          <span class="stat-value" id="activeTime">-</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="profile" class="page-section">
+      <div class="hero-shot main-padding">
+        <div class="hero-top">
+          <img src="img/calendar.svg" alt="calendar" width="24" height="24">
+          <p>Tue, 10 Oct 2025</p>
+        </div>
+        <div class="profile">
+          <img src="img/profile-picture.png" alt="profile-pic" width="100" height="100">
+          <div class="profile-right">
+            <span>Hi, Elena!</span>
+            <p>How are you feeling within today?</p>
+          </div>
+          <form>
+            <input type="text" placeholder="Search reflections or mindful moments…">
+            <img src="img/search.svg" alt="search" width="24" height="24">
+          </form>
+        </div>
+      </div>
+      <div class="main-padding journal">
+        <div class="journal-header">
+          <div class="journal-text">
+            <h2>Reflection Journal</h2>
+            <p class="journal-subtitle">Write freely. Edit anytime.</p>
+          </div>
+          <button class="btn primary-btn open-journal">Write Entry</button>
+        </div>
+
+        <div class="journal-editor main-padding">
+          <div class="close-journal">
+            <span></span>
+          </div>
+          <input type="text" id="journalTitle" placeholder="Entry title...">
+          <textarea id="journalContent" placeholder="What's on your mind today?"></textarea>
+          <button class="btn primary-btn" id="saveJournal">Save Entry</button>
+        </div>
+        <h3 id="yourEntries">Your Entries</h3>
+        <div class="carousel">
+          <button class="carousel-btn prev"><img src="img/arrow-right.svg" alt="prev"></button>
+          <div class="carousel-viewport">
+            <div id="journalList" class="journal-list"></div>
+          </div>
+          <button class="carousel-btn next"><img src="img/arrow-right.svg" alt="next"></button>
+        </div>
+
+      </div>
+    </section>
   </main>
   <footer></footer>
   <script src="main.js"></script>

@@ -11,7 +11,9 @@ input {
   background: none;
   border: none;
 }
-button:focus, button:active,
+
+button:focus,
+button:active,
 input:focus,
 input:active {
   outline: none;
@@ -21,6 +23,7 @@ input:active {
 a {
   text-decoration: none;
 }
+
 a:visited {
   text-decoration: none;
 }
@@ -30,21 +33,72 @@ a:visited {
   src: url(../fonts/EBGaramond-Regular.woff2);
   font-weight: 400;
 }
+
 @font-face {
   font-family: "EBG";
   src: url(../fonts/EBGaramond-Medium.woff2);
   font-weight: 500;
 }
+
 @font-face {
   font-family: "EBG";
   src: url(../fonts/EBGaramond-Bold.woff2);
   font-weight: 600;
 }
+
 @font-face {
   font-family: "Itim";
   src: url(../fonts/Itim-Regular.woff2);
   font-weight: 400;
 }
+
+h2 {
+  font-family: "EBG";
+  font-size: 16px;
+  color: #3E3A5D;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.btn {
+  border-radius: 5px;
+  width: 150px;
+  height: 40px;
+  font-family: "EBG";
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  cursor: pointer;
+}
+
+.btn.primary-btn {
+  background-color: #3E3A5D;
+  color: #DCE4F1;
+  transition: all 0.5s ease-in;
+}
+
+.btn.primary-btn:hover {
+  background-color: #DCE4F1;
+  color: #3E3A5D;
+  transition: all 0.5s ease-in;
+}
+
+.btn.secondary-btn {
+  background-color: #DCE4F1;
+  color: #3E3A5D;
+  border: 1px solid #3E3A5D;
+  transition: all 0.5s ease-in;
+}
+
+.btn.secondary-btn:hover {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: all 0.5s ease-in;
+}
+
 header {
   background-color: #DCE4F1;
   display: flex;
@@ -52,10 +106,13 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: nowrap;
+  z-index: 20;
 }
+
 header #logo {
   margin: 10px 0;
 }
+
 header .nav {
   display: flex;
   flex-direction: row;
@@ -63,6 +120,7 @@ header .nav {
   flex-wrap: nowrap;
   gap: 30px;
 }
+
 header .nav-item {
   display: flex;
   flex-direction: column;
@@ -73,6 +131,7 @@ header .nav-item {
   opacity: 50%;
   transition: opacity 0.5s;
 }
+
 header .nav-item span {
   color: #67527E;
   font-size: 15px;
@@ -80,6 +139,7 @@ header .nav-item span {
   position: relative;
   display: block;
 }
+
 header .nav-item span::after {
   position: absolute;
   content: "";
@@ -91,27 +151,33 @@ header .nav-item span::after {
   transform: scale(0);
   transition: all 0.5s linear;
 }
+
 header .nav-item:hover {
   opacity: 1;
   transition: opacity 0.5s;
 }
+
 header .nav-item:hover span::after {
   transition: all 0.5s linear;
   transform: scale(1);
   border-color: #67527E;
 }
+
 header .nav-item.active {
   opacity: 1;
   transition: opacity 0.5s;
 }
+
 header .nav-item.active span::after {
   transition: all 0.5s linear;
   transform: scale(1);
   border-color: #67527E;
 }
+
 header #logoMobile {
   display: none;
 }
+
 @media (max-width: 767.98px) {
   header {
     position: fixed;
@@ -119,21 +185,26 @@ header #logoMobile {
     bottom: 0;
     box-shadow: rgba(0, 0, 0, 0.1) -2px -7px 12px;
   }
+
   header #logo {
     display: none;
   }
+
   header .nav {
     justify-content: space-between;
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
   }
+
   header .nav-item span {
     display: none;
   }
+
   header .nav-item:hover {
     opacity: 50%;
   }
+
   header #logoMobile {
     display: block;
     border-radius: 50%;
@@ -146,6 +217,7 @@ header #logoMobile {
     align-items: center;
     flex-wrap: nowrap;
   }
+
   header #logoMobile img {
     filter: brightness(0) saturate(100%) invert(32%) sepia(10%) saturate(1798%) hue-rotate(226deg) brightness(99%) contrast(86%);
   }
@@ -154,11 +226,13 @@ header #logoMobile {
 .main-padding {
   padding: 0 60px;
 }
+
 @media (max-width: 1023.98px) {
   .main-padding {
     padding: 0 30px;
   }
 }
+
 @media (max-width: 559.98px) {
   .main-padding {
     padding: 0 16px;
@@ -166,49 +240,52 @@ header #logoMobile {
 }
 
 .page-section {
-  height: 100vh;
   display: none;
 }
+
 .page-section.js-page-section {
   display: block;
 }
 
-#home {
-  background: linear-gradient(359.98deg, #BBC5C6 0.01%, #DCE4F1 99.99%);
-}
-#home .hero-shot {
+.hero-shot {
   background-color: #DCE4F1;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
 }
-#home .hero-shot .hero-top {
+
+.hero-shot .hero-top {
   display: flex;
   margin-bottom: 10px;
 }
-#home .hero-shot .hero-top p {
+
+.hero-shot .hero-top p {
   font-family: "EBG";
   font-size: 15px;
   color: #3E3A5D;
   font-weight: 400;
 }
-#home .hero-shot .profile {
+
+.hero-shot .profile {
   display: flex;
   flex-direction: row;
   align-items: center;
   flex-wrap: nowrap;
   gap: 30px;
 }
-#home .hero-shot .profile-right span {
+
+.hero-shot .profile-right span {
   font-size: 24px;
   font-family: "EBG";
   color: #3E3A5D;
 }
-#home .hero-shot .profile-right p {
+
+.hero-shot .profile-right p {
   font-size: 16px;
   font-family: "EBG";
   color: #3E3A5D;
 }
-#home .hero-shot form {
+
+.hero-shot form {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -220,26 +297,567 @@ header #logoMobile {
   padding: 10px 15px;
   flex-grow: 1;
 }
-#home .hero-shot form input {
+
+.hero-shot form input {
   flex-grow: 1;
   font-size: 16px;
   color: #3E3A5D;
   padding: 5px 10px;
 }
-#home .hero-shot form input::placeholder {
+
+.hero-shot form input::placeholder {
   font-size: 16px;
   color: #3E3A5D;
   opacity: 0.75;
 }
 
+@media (max-width: 767.98px) {
+  .hero-shot {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  .hero-shot .profile {
+    flex-wrap: wrap;
+  }
+}
+
+#home {
+  background: linear-gradient(359.98deg, #BBC5C6 0.01%, #DCE4F1 99.99%);
+  padding-bottom: 80px;
+}
+
+#home .state-of-mind {
+  padding-top: 30px;
+}
+
+#home .state-of-mind h2 {
+  width: fit-content;
+  margin: 30px auto;
+}
+
+#home .state-of-mind-container {
+  padding: 15px;
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  justify-content: center;
+}
+
+#home .state-of-mind-container::-webkit-scrollbar {
+  appearance: none;
+}
+
+#home .state-of-mind-card {
+  background-color: #DCE4F1;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 15px;
+  gap: 15px;
+}
+
+#home .state-of-mind-card span {
+  font-size: 14px;
+  font-family: "EBG";
+  color: #3E3A5D;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+#home .wellness-overview {
+  padding-top: 30px;
+}
+
+#home .wellness-overview h2 {
+  margin: 30px auto;
+  width: fit-content;
+}
+
+#home .wellness-overview-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  padding: 15px 0;
+}
+
+#home .wellness-overview-card {
+  background-color: #DCE4F1;
+  padding: 10px;
+  position: relative;
+  display: flex;
+  gap: 5px;
+  flex-direction: column;
+  width: 60%;
+  align-items: flex-start;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+#home .wellness-overview-card span {
+  font-family: "EBG";
+  font-size: 14px;
+  font-weight: 500;
+  color: #3E3A5D;
+  z-index: 2;
+  display: block;
+}
+
+#home .wellness-overview-card p {
+  font-family: "EBG";
+  font-size: 14px;
+  font-weight: 400;
+  color: #3E3A5D;
+  z-index: 2;
+  display: block;
+}
+
+#home .wellness-overview-card img {
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+
+#home .daily-thought {
+  background-color: #DCE4F1;
+  padding: 30px 0;
+  margin-top: 30px;
+}
+
+#home .daily-thought-container {
+  max-width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 30px;
+  margin: 0 auto;
+}
+
+#home .daily-thought-container span {
+  font-size: 15px;
+  color: #3E3A5D;
+  font-family: "EBG";
+  opacity: 0.65;
+}
+
+#home .daily-thought-container p {
+  font-size: 15px;
+  color: #3E3A5D;
+  font-family: "EBG";
+  font-style: italic;
+  font-weight: 500;
+}
+
+#home .daily-thought-icons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+#home .reconnect {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#home .reconnect-container {
+  background-color: #DCE4F1;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 15px;
+  position: relative;
+  width: 100%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#home .reconnect-container img {
+  position: absolute;
+  right: 10px;
+  z-index: 1;
+}
+
+#home .reconnect-container span {
+  font-family: "EBG";
+  color: #3E3A5D;
+  font-size: 15px;
+  font-weight: 500;
+  z-index: 2;
+}
+
+#home .reconnect-container p {
+  font-family: "EBG";
+  color: #3E3A5D;
+  font-size: 15px;
+  opacity: 0.65;
+  z-index: 2;
+}
+
+#home .yoga-session {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  background-color: #DCE4F1;
+  z-index: 25;
+  display: none;
+  top: 0;
+  left: 0;
+}
+
+#home .yoga-session.js-yoga-session {
+  display: flex;
+}
+
+@media (max-width: 767.98px) {
+  #home .state-of-mind-container {
+    justify-content: flex-start;
+  }
+
+  #home .wellness-overview-card {
+    width: 100%;
+  }
+
+  #home .daily-thought {
+    padding: 15px 0;
+  }
+
+  #home .daily-thought-container {
+    max-width: 100%;
+  }
+}
+
 #activities {
+  background: linear-gradient(359.98deg, #BBC5C6 0.01%, #DCE4F1 99.99%);
+}
+
+#activities .activites-container {
+  margin-top: 30px;
+  padding-bottom: 60px;
+}
+
+#activities .activites-suggestions {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+#activities .activites-suggestions .activites-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 20px;
+  background-color: #DCE4F1;
+  padding: 15px;
+}
+
+#activities .activites-suggestions .activites-btn .activites-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+#activities .activites-suggestions .activites-btn .activites-info .activites-img {
+  display: flex;
+}
+
+#activities .activites-suggestions .activites-btn .activites-info .activites-img span {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   background-color: #BBC5C6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  border: 2px solid #DCE4F1;
+  opacity: 1;
+}
+
+#activities .activites-suggestions .activites-btn .activites-info .activites-img span:not(:first-of-type) {
+  margin-left: -5px;
+}
+
+#activities .activites-suggestions .activites-btn .activites-info h3 {
+  font-family: "EBG";
+  font-weight: 500;
+  font-size: 16px;
+  color: #67527E;
+  text-transform: capitalize;
+}
+
+#activities .activites-suggestions .activites-btn .activites-info span {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "EBG";
+  color: #67527E;
+  opacity: 65%;
 }
 
 #statistics {
-  background-color: #9C82A5;
+  background: linear-gradient(359.98deg, #BBC5C6 0.01%, #DCE4F1 99.99%);
+  min-height: 100dvh;
+  padding-bottom: 30px;
+}
+
+#statistics .statistics-quote {
+  font-family: "EBG";
+  margin-bottom: 30px;
+  color: #67527E;
+  font-size: 16px;
+  display: block;
+}
+
+#statistics h2 {
+  margin-bottom: 15px;
+  margin-top: 30px;
+}
+
+#statistics .stats-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  gap: 15px;
+}
+
+#statistics .stats-grid .stat-card {
+  background-color: #DCE4F1;
+  padding: 15px;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
+
+#statistics .stats-grid .stat-card span {
+  color: #67527E;
+  font-size: 16px;
+  font-family: "EBG";
+}
+
+#statistics .stats-grid .stat-card .stat-value {
+  padding: 5px;
+  background-color: #BBC5C6;
+  border-radius: 5px;
+}
+
+#statistics .stats-grid .stat-card .stat-label {
+  font-weight: 500;
 }
 
 #profile {
+  background: linear-gradient(359.98deg, #BBC5C6 0.01%, #DCE4F1 99.99%);
+  min-height: 100dvh;
+}
+
+#profile .journal {
+  margin-top: 30px;
+  position: relative;
+}
+
+#profile .journal h2 {
+  margin-bottom: 10px;
+}
+
+#profile .journal p {
+  margin-bottom: 30px;
+  font-family: "EBG";
+  font-size: 16px;
+  color: #67527E;
+}
+
+#profile .journal h3 {
+  font-family: "EBG";
+  font-size: 18px;
+  color: #3E3A5D;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+#profile .journal h4 {
+  font-family: "EBG";
+  font-size: 16px;
+  color: #3E3A5D;
+  font-weight: 600;
+}
+
+#profile .journal-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+#profile .journal-editor {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #DCE4F1;
+  height: 100dvh;
+  left: 0;
+  padding-top: 30px;
+  gap: 30px;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+}
+
+#profile .journal-editor .close-journal {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  margin-right: 15px;
+}
+
+#profile .journal-editor .close-journal span {
+  position: relative;
+  height: 30px;
+  display: block;
+  width: 30px;
+  cursor: pointer;
+}
+
+#profile .journal-editor .close-journal span:after {
+  content: "";
+  width: 30px;
+  height: 3px;
   background-color: #67527E;
+  position: absolute;
+  transform: rotate(-45deg);
+  top: 15px;
+}
+
+#profile .journal-editor .close-journal span:before {
+  content: "";
+  top: 15px;
+  width: 30px;
+  height: 3px;
+  background-color: #67527E;
+  position: absolute;
+  transform: rotate(45deg);
+}
+
+#profile .journal-editor #journalTitle {
+  color: #3E3A5D;
+  font-size: 16px;
+  font-family: "EBG";
+  font-weight: 500;
+}
+
+#profile .journal-editor #journalTitle::placeholder {
+  color: #67527E;
+  opacity: 0.75;
+}
+
+#profile .journal-editor #journalContent {
+  padding: 10px;
+  color: #3E3A5D;
+  background-color: #DCE4F1;
+  border: none;
+  min-height: 60dvh;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#profile .journal-editor #journalContent:focus-visible {
+  outline: none;
+}
+
+#profile .journal .js-editor {
+  transform: translateX(0);
+  transition: transform 0.5s ease-in;
+  overflow-y: auto;
+}
+
+#refreshImg {
+  cursor: pointer;
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+}
+
+.carousel .journal-list {
+  display: flex;
+  transition: transform 0.4s ease;
+  gap: 10px;
+}
+
+.carousel .journal-card {
+  flex: 0 0 auto;
+  padding: 20px;
+  background-color: #DCE4F1;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.carousel .journal-card span {
+  font-family: "EBG";
+  color: #3E3A5D;
+}
+
+.carousel .journal-card .journal-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel .prev {
+  transform: rotate(180deg);
+}
+
+.carousel .prev,
+.carousel .next {
+  cursor: pointer;
+}
+
+@media (max-width: 767.98px) {
+  .carousel .journal-card {
+    width: 50%;
+  }
+}
+
+@media (max-width: 559.98px) {
+  .carousel .journal-card {
+    width: 100%;
+  }
+}
+
+.js-fixed {
+  overflow: hidden;
 }
